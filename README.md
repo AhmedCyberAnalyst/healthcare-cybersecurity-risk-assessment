@@ -75,3 +75,44 @@ The project considers cybersecurity challenges associated with medical devices a
 ### Disclaimer
 
 This is a simulated educational project. No real hospital systems, medical devices, production networks, or patient data were accessed or tested.
+
+### Hospital Network Architecture
+
+```
+┌──────────────┐
+                 │     EHR      │
+                 └──────▲───────┘
+                        │
+                    Hospital
+                     Network
+                        │
+        ┌───────────────┼───────────────┐
+        │               │               │
+      PACS             RIS          Workstation
+        ▲               ▲               │
+        │               │               │
+   ┌────┼────┐          │          Radiologist
+   │    │    │
+  CT   MRI  X-Ray 
+  """
+```
+
+### Attack Path (Simulated)
+```
+ Phishing
+   ↓
+Compromised Workstation
+   ↓
+Credential Theft
+   ↓
+Lateral Movement
+   ↓
+PACS
+   ↓
+Ransomware
+   ↓
+Radiology Disruption
+
+```
+
+  
